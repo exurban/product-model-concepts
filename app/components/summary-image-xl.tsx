@@ -33,7 +33,7 @@ const SummaryImageExtraLarge = ({ entry }) => {
             {entry.metadata.title}
           </Link>
         </h2>
-        <div className="prose prose-neutral dark:prose-invert prose-base lg:prose-lg tracking-tight prose-h3:text-neutral-900 dark:prose-h3:text-neutral-100 prose-h3:border-none max-w-none">
+        <div className="prose prose-neutral dark:prose-invert prose-base lg:prose-lg tracking-tight prose-h2:text-neutral-900 dark:prose-h2:text-neutral-100 prose-h3:text-neutral-900 dark:prose-h3:text-neutral-100  prose-h3:border-none max-w-none">
           <CustomMDX source={entry.excerpt} />
         </div>
       </div>
