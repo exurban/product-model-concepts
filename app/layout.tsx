@@ -53,9 +53,11 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="subpixel-antialiased max-w-screen-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="subpixel-antialiased">
+        <nav className="sticky top-0 z-50">
           <Navbar />
+        </nav>
+        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 z-10">
           {children}
           <Analytics />
           <SpeedInsights />

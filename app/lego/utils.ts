@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 
-type Metadata = {
+export type Metadata = {
   title: string
   publishedAt: string
   lastModified?: string
@@ -53,10 +53,6 @@ function getMDXData(dir) {
   let mdxFiles = getMDXFiles(dir)
   return mdxFiles.map((file) => {
     let { metadata, excerpt, content } = readMDXFile(path.join(dir, file))
-    // let toc = buildTableOfContents(content)
-    // let toc = getHeadings(content)
-    
-    // console.log(`TOC: ${toc}`)
     let slug = path.basename(file, path.extname(file))
 
     return {

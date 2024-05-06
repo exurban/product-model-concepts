@@ -56,6 +56,16 @@ function Cite(props) {
   );
 }
 
+function ColoredCallout({ children, ...props }) {
+  return (
+    <div
+      className={`p-4 lg:p-6 mb-4 lg:mb-6 prose-h3:my-2 rounded-xl pointer-events-none ${props.color}`}
+    >
+      {children}
+    </div>
+  );
+}
+
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
@@ -82,7 +92,7 @@ function createHeading(level) {
     let slug = slugify(children);
     return React.createElement(
       `h${level}`,
-      { id: slug },
+      { id: slug, className: "scroll-mt-16" },
       [
         React.createElement("a", {
           href: `#${slug}`,
@@ -111,6 +121,7 @@ let components = {
   code: Code,
   Table,
   Cite,
+  ColoredCallout,
 };
 
 export function CustomMDX(props) {

@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
 import { getLegoEntries } from "app/lego/utils";
-import H2TableOfContents from "./h2-table-of-contents";
-import SummaryImageExtraLarge from "./summary-image-xl";
-import SummaryImageLarge from "./summary-image-lg";
-import SummaryImageMedium from "./summary-image-md";
+import H2TableOfContents from "app/components/h2-table-of-contents";
 
 const LegoEntries = () => {
   let allLegoEntries = getLegoEntries();
@@ -12,7 +9,7 @@ const LegoEntries = () => {
   return (
     <div className="flex flex-row space-x-4">
       <div className="order-last hidden lg:block shrink-0 lg:min-w-64 ml-6">
-        <div className="sticky lg:ml-6 top-[180px] h-[calc(100vh-180px)]">
+        <div className="sticky lg:ml-6 top-[180px] h-[calc(100vh-150px)]">
           <div>
             <H2TableOfContents />
           </div>
@@ -32,15 +29,6 @@ const LegoEntries = () => {
               id={entry.slug}
               className="p-6 lg:p-10 border-b border-gray-150 scroll-mt-16"
             >
-              {entry.metadata.imageSize === "XL" && (
-                <SummaryImageExtraLarge entry={entry} />
-              )}
-              {entry.metadata.imageSize === "LG" && (
-                <SummaryImageLarge entry={entry} />
-              )}
-              {entry.metadata.imageSize === "MD" && (
-                <SummaryImageMedium entry={entry} />
-              )}
               {entry.metadata.linkUrl && (
                 <div className="flex justify-end mt-4">
                   <Link

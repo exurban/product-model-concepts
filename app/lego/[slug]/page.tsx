@@ -91,46 +91,50 @@ export default function Lego({ params }) {
           }),
         }}
       />
-      <div className="relative lg:flex lg:flex-row">
-        <div className="hidden w-[250px] lg:flex lg:shrink-0"></div>
-        <nav className=" order-last hidden w-60 shrink-0 lg:block">
-          <div className="sticky lg:ml-6 top-[150px] h-[calc(100vh-150px)]">
-            <TableOfContents />
-            <hr className="my-4 border-neutral-200 dark:border-neutral-700" />
-            {entry.metadata.linkUrl && (
-              <div className="text-neutral-600 text-sm">
-                <a
-                  href={entry.metadata.linkUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center"
-                >
-                  Comment on this page in Notion
-                  <ArrowUpRightIcon className="h-4 w-4 mr-1" />
-                </a>
-              </div>
-            )}
-          </div>
-        </nav>
-        <div className="mx-auto mb-20 ">
-          <h1 className="text-4xl text-neutral-900 dark:text-neutral-200">
-            {entry.metadata.title}
-          </h1>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-12">
-            last modified: {formatDate(lastModified)}
-          </p>
-
-          <div className="prose prose-neutral dark:prose-invert prose-base lg:prose-lg">
-            <div className="rounded-xl bg-sky-100 dark:bg-sky-900 py-5 px-8">
-              <CustomMDX source={entry.excerpt} />
+      <div className="max-w-7xl lg:mx-auto">
+        <h1 className="font-semibold text-4xl mb-8 tracking-tighter">
+          Product Model Concepts (LEGO dub)
+        </h1>
+        <div className="flex flex-row space-x-4 max-w-5xl lg:mx-auto">
+          <nav className="order-last hidden lg:block shrink-0 lg:min-w-64 ml-6">
+            <div className="sticky lg:ml-6 top-[180px] h-[calc(100vh-180px)]">
+              <TableOfContents />
+              <hr className="my-4 border-neutral-200 dark:border-neutral-700" />
+              {entry.metadata.linkUrl && (
+                <div className="text-neutral-600 text-sm">
+                  <a
+                    href={entry.metadata.linkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    Comment on this page in Notion
+                    <ArrowUpRightIcon className="h-4 w-4 mr-1" />
+                  </a>
+                </div>
+              )}
             </div>
+          </nav>
+          <div className="mx-auto mb-20 ">
+            <h1 className="text-4xl text-neutral-900 dark:text-neutral-200">
+              {entry.metadata.title}
+            </h1>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-12">
+              last modified: {formatDate(lastModified)}
+            </p>
 
-            <article className="">
-              <CustomMDX
-                source={entry.content}
-                options={{ remarkPlugins: [remarkGfm], rehypePlugins: [] }}
-              />
-            </article>
+            <div className="prose prose-neutral dark:prose-invert prose-base lg:prose-lg">
+              <div className="rounded-xl bg-sky-100 dark:bg-sky-900 py-5 px-8">
+                <CustomMDX source={entry.excerpt} />
+              </div>
+
+              <article className="">
+                <CustomMDX
+                  source={entry.content}
+                  options={{ remarkPlugins: [remarkGfm], rehypePlugins: [] }}
+                />
+              </article>
+            </div>
           </div>
         </div>
       </div>
