@@ -31,14 +31,14 @@ export async function GET(request: Request) {
             />
             <div tw="bg-black absolute inset-x-0 inset-y-40 bg-opacity-40"></div>
             <div tw="flex flex-col items-start justify-center w-full h-full relative">
-              <div tw="text-[80px] text-white font-black text-center mx-20">
+              <div tw="text-[70px] text-rose-500 font-black mx-20">
+                Product Model Concepts
+              </div>
+              <div tw="text-[50px] text-white font-black text-left mx-20">
                 {title}
               </div>
-              <div tw="text-[50px] text-white font-black text-center mx-20">
+              <div tw="text-[40px] text-rose-500 font-black text-left mb-10 mx-20">
                 {description}
-              </div>
-              <div tw="text-[30px] text-rose-500 font-black text-left mb-10 mx-20">
-                Product Model Concepts
               </div>
             </div>
           </div>
