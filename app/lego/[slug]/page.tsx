@@ -32,6 +32,11 @@ export function generateMetadata({ params }) {
     ? image
     : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
+  const ogUrl = new URL(`${baseUrl}/api/og`);
+  ogUrl.searchParams.set("heading", title);
+  ogUrl.searchParams.set("type", "article");
+  ogUrl.searchParams.set("mode", "dark");
+
   return {
     title,
     description,
@@ -43,7 +48,7 @@ export function generateMetadata({ params }) {
       url: `${baseUrl}/lego/${entry.slug}`,
       images: [
         {
-          url: ogImage,
+          url: ogUrl.toString(),
         },
       ],
     },
