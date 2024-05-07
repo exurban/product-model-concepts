@@ -31,7 +31,7 @@ export async function GET(request: Request) {
             />
             <div tw="bg-black absolute inset-x-0 inset-y-20 bg-opacity-60"></div>
             <div tw="flex flex-col items-start justify-center w-full h-full relative">
-              <div tw="text-[70px] text-rose-500 font-black mx-20">
+              <div tw="text-[70px] text-rose-700 font-black mx-20">
                 Product Model Concepts
               </div>
               <div tw="text-[50px] text-white font-black text-left mx-20">
