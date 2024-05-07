@@ -15,11 +15,11 @@ export async function GET(request: Request) {
 
     return new ImageResponse(
       (
-        <div tw="flex flex-col w-full h-full items-center justify-center bg-white">
+        <div tw="flex flex-col w-full h-full items-center justify-center bg-[url(`https://res.cloudinary.com/bjg-photo/image/upload/v1713406974/Discovery_gkjgum.png`)]">
           <div tw="bg-gray-50 flex w-full">
             <div tw="flex flex-col md:flex-row w-full py-12 px-4 md:items-center justify-between p-8">
               <h2 tw="flex flex-col text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 text-left">
-                <span></span>
+                <span tw="text-rose-400">Description</span>
                 <span tw="text-rose-600">{title}</span>
               </h2>
               <div tw="mt-8 flex md:mt-0">
