@@ -39,7 +39,6 @@ export default function H2TableOfContents() {
   }, []);
 
   useEffect(() => {
-    // console.log("TableOfContents useEffect");
     const elements = Array.from(document.querySelectorAll("h2")).map(
       (elem) => ({
         id: slugify(elem.textContent),
@@ -59,14 +58,14 @@ export default function H2TableOfContents() {
             On this page
           </div>
           <div className="relative">
-            <ul className="styled-scrollbar max-h-[70vh] space-y-2.5 overflow-y-auto py-4 text-sm ">
+            <ul className="styled-scrollbar max-h-[70vh] overflow-y-auto text-sm ">
               {headings.map((heading) => (
                 <li
                   key={heading.id}
-                  className={`block leading-[1.6] text-neutral-600 ${
+                  className={`block leading-[1.6] text-neutral-600 py-2.5 pl-4 ${
                     activeId === heading.id
-                      ? "text-rose-500 hover:text-rose-600 hover:text-bold"
-                      : "text-neutral-600 hover:text-black hover:text-bold dark:text-neutral-400 hover:dark:text-white"
+                      ? "text-rose-500 hover:text-rose-600 hover:text-bold border-l-2 border-rose-500"
+                      : "text-neutral-400 hover:text-neutral-900 hover:text-bold dark:text-neutral-400 hover:dark:text-white border-l-2 border-neutral-300 dark:border-neutral-400"
                   }`}
                 >
                   <a

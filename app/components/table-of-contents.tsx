@@ -39,7 +39,6 @@ export default function TableOfContents() {
   }, []);
 
   useEffect(() => {
-    // console.log("TableOfContents useEffect");
     const elements = Array.from(document.querySelectorAll("h2, h3")).map(
       (elem) => ({
         id: slugify(elem.textContent),
@@ -66,7 +65,7 @@ export default function TableOfContents() {
                   className={`block leading-[1.6] text-neutral-600 py-2.5 ${
                     activeId === heading.id
                       ? "text-rose-500 hover:text-rose-600 hover:text-bold border-l-2 border-rose-500"
-                      : "text-neutral-400 hover:text-neutral-900 hover:text-bold dark:text-neutral-400 hover:dark:text-white border-l-2 border-neutral-300"
+                      : "text-neutral-400 hover:text-neutral-900 hover:text-bold dark:text-neutral-400 hover:dark:text-white border-l-2 border-neutral-300 dark:border-neutral-400"
                   } ${heading.tagName === "h2" ? "pl-4" : "pl-6"}`}
                 >
                   <a
