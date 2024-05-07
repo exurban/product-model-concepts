@@ -11,28 +11,32 @@ export async function GET(request: Request) {
       ? searchParams.get("title")?.slice(0, 100)
       : "Product Model Concepts";
 
-    console.log(searchParams.keys());
+    const image =
+      searchParams.get("image") ||
+      "https://res.cloudinary.com/bjg-photo/image/upload/v1713406974/Discovery_gkjgum.png";
 
     return new ImageResponse(
       (
-        <div tw="flex flex-col w-full h-full items-center justify-center bg-[url(`https://res.cloudinary.com/bjg-photo/image/upload/v1713406974/Discovery_gkjgum.png`)]">
-          <div tw="bg-gray-50 flex w-full">
-            <div tw="flex flex-col md:flex-row w-full py-12 px-4 md:items-center justify-between p-8">
-              <h2 tw="flex flex-col text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 text-left">
-                <span tw="text-rose-400">Description</span>
-                <span tw="text-rose-600">{title}</span>
-              </h2>
-              <div tw="mt-8 flex md:mt-0">
-                <div tw="flex rounded-md shadow">
-                  <a tw="flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white">
-                    Read
-                  </a>
-                </div>
+        <div tw="h-full w-full flex items-start justify-start bg-white">
+          <div tw="flex items-start justify-start h-full">
+            <img
+              style={{ objectFit: "cover" }}
+              tw="absolute inset-0 w-full h-full"
+              src={image}
+            />
+            <div tw="bg-black absolute inset-0 bg-opacity-60"></div>
+            <div tw="flex items-center justify-center w-full h-full relative">
+              <div tw="text-[80px] text-white font-black text-center mx-20">
+                {title}
               </div>
             </div>
           </div>
         </div>
-      )
+      ),
+      {
+        width: 1200,
+        height: 627,
+      }
     );
   } catch (e: any) {
     return new Response("Failed to generate OG image", { status: 500 });
