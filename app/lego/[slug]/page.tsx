@@ -32,7 +32,7 @@ export function generateMetadata({ params }) {
     ? image
     : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
-  const ogUrl = new URL(`${baseUrl}/api/og`);
+  const ogUrl = new URL(`${baseUrl}/og`);
   ogUrl.searchParams.set("title", title);
   ogUrl.searchParams.set("description", description);
   ogUrl.searchParams.set("image", ogImage);
