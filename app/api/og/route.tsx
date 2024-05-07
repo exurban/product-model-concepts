@@ -13,8 +13,9 @@ export async function GET(request: Request) {
 
     const hasDescription = searchParams.has("description");
     const description = hasDescription
-      ? searchParams.get("description")
+      ? searchParams.get("description")?.replace(`"`, "").trim()
       : "Product Model Concepts";
+
     const image =
       searchParams.get("image") ||
       "https://res.cloudinary.com/bjg-photo/image/upload/v1713406974/Discovery_gkjgum.png";
@@ -28,13 +29,16 @@ export async function GET(request: Request) {
               tw="absolute inset-0 w-full h-full"
               src={image}
             />
-            <div tw="bg-black absolute inset-x-0 inset-y-20 bg-opacity-40"></div>
+            <div tw="bg-black absolute inset-x-0 inset-y-40 bg-opacity-40"></div>
             <div tw="flex flex-col items-center justify-center w-full h-full relative">
               <div tw="text-[80px] text-white font-black text-center mx-20">
                 {title}
               </div>
               <div tw="text-[50px] text-white font-black text-center mx-20">
                 {description}
+              </div>
+              <div tw="text-[50px] text-white font-black text-start mx-20">
+                Product Model Concepts
               </div>
             </div>
           </div>
