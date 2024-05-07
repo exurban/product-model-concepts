@@ -92,16 +92,16 @@ export default function Lego({ params }) {
         }}
       />
       <div className="max-w-7xl lg:mx-auto">
-        <h1 className="font-semibold text-4xl mb-8 tracking-tighter">
+        <h1 className="font-semibold text-4xl mb-8 ml-8 tracking-tighter">
           Product Model Concepts (LEGO dub)
         </h1>
-        <div className="flex flex-row space-x-4 max-w-5xl lg:mx-auto">
-          <nav className="order-last hidden lg:block shrink-0 lg:min-w-64 ml-6">
+        <div className="mx-auto lg:flex lg:flex-row lg:space-x-4 max-w-5xl lg:mx-auto">
+          <nav className="order-last hidden lg:block shrink-0 lg:w-64 ml-6">
             <div className="sticky lg:ml-6 top-[180px] h-[calc(100vh-180px)]">
               <TableOfContents />
               <hr className="my-4 border-neutral-200 dark:border-neutral-700" />
               {entry.metadata.linkUrl && (
-                <div className="text-neutral-600 text-sm">
+                <div className="text-neutral-400 text-sm">
                   <a
                     href={entry.metadata.linkUrl}
                     target="_blank"
@@ -115,7 +115,7 @@ export default function Lego({ params }) {
               )}
             </div>
           </nav>
-          <div className="mx-auto mb-20 ">
+          <div className="mx-auto mb-20 max-w-2xl">
             <h1 className="text-4xl text-neutral-900 dark:text-neutral-200">
               {entry.metadata.title}
             </h1>

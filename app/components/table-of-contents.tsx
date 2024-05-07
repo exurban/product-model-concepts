@@ -55,19 +55,19 @@ export default function TableOfContents() {
     <>
       {headings.length > 0 && (
         <div>
-          <div className="text-neutral-900 dark:text-neutral-100 mb-1 mt-[7px] text-sm font-medium">
+          <div className="text-neutral-900 dark:text-neutral-100 mb-3 mt-[7px] text-sm font-medium">
             On this page
           </div>
           <div className="relative">
-            <ul className="styled-scrollbar max-h-[70vh] space-y-2.5 overflow-y-auto py-4 text-sm ">
+            <ul className="styled-scrollbar max-h-[70vh] overflow-y-auto text-sm ">
               {headings.map((heading) => (
                 <li
                   key={heading.id}
-                  className={`block leading-[1.6] text-neutral-600 ${
+                  className={`block leading-[1.6] text-neutral-600 py-2.5 ${
                     activeId === heading.id
-                      ? "text-rose-500 hover:text-rose-600 hover:text-bold"
-                      : "text-neutral-600 hover:text-black hover:text-bold dark:text-neutral-400 hover:dark:text-white"
-                  } ${heading.tagName === "h2" ? "ml-2" : "ml-4"}`}
+                      ? "text-rose-500 hover:text-rose-600 hover:text-bold border-l-2 border-rose-500"
+                      : "text-neutral-400 hover:text-neutral-900 hover:text-bold dark:text-neutral-400 hover:dark:text-white border-l-2 border-neutral-300"
+                  } ${heading.tagName === "h2" ? "pl-4" : "pl-6"}`}
                 >
                   <a
                     href={`#${heading.id}`}

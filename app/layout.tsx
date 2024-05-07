@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     siteName: "Product Model Concepts",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://res.cloudinary.com/bjg-photo/image/upload/v1712864044/3-initial-pmf_gbnsfi.png",
+      },
+    ],
   },
   robots: {
     index: true,
