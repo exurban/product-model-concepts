@@ -29,7 +29,7 @@ export async function GET(request: Request) {
               tw="absolute inset-0 w-full h-full"
               src={image}
             />
-            <div tw="bg-black absolute inset-x-0 inset-y-20 bg-opacity-40"></div>
+            <div tw="bg-black absolute inset-x-0 inset-y-20 bg-opacity-60"></div>
             <div tw="flex flex-col items-start justify-center w-full h-full relative">
               <div tw="text-[70px] text-rose-500 font-black mx-20">
                 Product Model Concepts
