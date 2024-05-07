@@ -28,12 +28,12 @@ export async function GET(request: Request) {
               tw="absolute inset-0 w-full h-full"
               src={image}
             />
-            <div tw="bg-black absolute py-4 bg-opacity-40"></div>
-            <div tw="flex flex-row items-center justify-center w-full h-full relative">
+            <div tw="bg-black absolute inset-x-0 inset-y-20 bg-opacity-40"></div>
+            <div tw="flex flex-col items-center justify-center w-full h-full relative">
               <div tw="text-[80px] text-white font-black text-center mx-20">
                 {title}
               </div>
-              <div tw="text-[40px] text-white font-black text-center mx-20">
+              <div tw="text-[50px] text-white font-black text-center mx-20">
                 {description}
               </div>
             </div>
