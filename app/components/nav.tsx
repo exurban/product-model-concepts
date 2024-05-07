@@ -9,7 +9,7 @@ const navItems = {
 export function Navbar() {
   return (
     <header className="mb-8 tracking-tight">
-      <div className=" bg-neutral-50 border-neutral-200 border-b-2 z-50">
+      <div className=" bg-neutral-50 dark:bg-neutral-900 border-neutral-200 border-b-2 z-50">
         <nav
           className="h-16 flex flex-row items-start lg:max-w-7xl lg:mx-auto py-auto"
           id="nav"

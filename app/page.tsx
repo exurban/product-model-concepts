@@ -1,4 +1,5 @@
 import LegoEntries from "app/components/lego-entries";
+import EinsteinSimple from "./components/einstein-simple";
 
 export const metadata = {
   title: "LEGO dub",
@@ -17,6 +18,9 @@ export default function Page() {
       <h1 className="font-semibold text-4xl mb-8 tracking-tighter">
         Product Model Concepts (LEGO dub)
       </h1>
+      <div>
+        <EinsteinSimple />
+      </div>
       <LegoEntries />
     </section>
   );

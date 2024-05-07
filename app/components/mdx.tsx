@@ -59,7 +59,7 @@ function Cite(props) {
 function ColoredCallout({ children, ...props }) {
   return (
     <div
-      className={`p-4 lg:p-6 mb-4 lg:mb-6 prose-h3:my-2 rounded-xl pointer-events-none ${props.color}`}
+      className={`p-4 lg:p-6 mb-4 lg:mb-6 prose-h3:my-2 rounded-xl pointer-events-none dark:text-white ${props.color}`}
     >
       {children}
     </div>
