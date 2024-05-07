@@ -37,6 +37,9 @@ export async function GET(request: Request) {
               <div tw="text-[50px] text-white font-black text-center mx-20">
                 {description}
               </div>
+              <div tw="text-[30px] text-rose-500 font-black text-right mx-20">
+                Product Model Concepts
+              </div>
             </div>
           </div>
         </div>
