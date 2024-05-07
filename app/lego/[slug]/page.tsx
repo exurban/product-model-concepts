@@ -34,6 +34,7 @@ export function generateMetadata({ params }) {
 
   const ogUrl = new URL(`${baseUrl}/api/og`);
   ogUrl.searchParams.set("title", title);
+  ogUrl.searchParams.set("description", description);
   ogUrl.searchParams.set("image", ogImage);
 
   return {
