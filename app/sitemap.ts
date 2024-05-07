@@ -1,10 +1,10 @@
 import { getLegoEntries } from 'app/lego/utils'
 
-export const baseUrl = 'https://portfolio-blog-starter.vercel.app'
+export const baseUrl = 'https://thegyre.io'
 
 export default async function sitemap() {
   let entries = getLegoEntries().map((entry) => ({
-    url: `${baseUrl}/blog/${entry.slug}`,
+    url: `${baseUrl}/lego/${entry.slug}`,
     lastModified: entry.metadata.lastModified,
   }))
 

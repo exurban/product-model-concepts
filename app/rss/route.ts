@@ -15,7 +15,7 @@ export async function GET() {
       (entry) =>
         `<item>
           <title>${entry.metadata.title}</title>
-          <link>${baseUrl}/blog/${entry.slug}</link>
+          <link>${baseUrl}/lego/${entry.slug}</link>
           <description>${entry.metadata.summary || ''}</description>
           <pubDate>${new Date(
             entry.metadata.publishedAt
@@ -27,9 +27,9 @@ export async function GET() {
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">
     <channel>
-        <title>My Portfolio</title>
+        <title>Product Model Concepts</title>
         <link>${baseUrl}</link>
-        <description>This is my portfolio RSS feed</description>
+        <description>RSS feed for Product Model Concepts</description>
         ${itemsXml}
     </channel>
   </rss>`
