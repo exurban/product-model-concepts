@@ -26,6 +26,7 @@ export function generateMetadata({ params }) {
     lastModified,
     summary: description,
     imageUrl: image,
+    imageSize,
   } = entry.metadata;
   let publishedTime = lastModified ? lastModified : publishedAt;
   let ogImage = image
@@ -36,6 +37,7 @@ export function generateMetadata({ params }) {
   ogUrl.searchParams.set("title", title);
   ogUrl.searchParams.set("description", description);
   ogUrl.searchParams.set("image", ogImage);
+  ogUrl.searchParams.set("size", imageSize);
 
   return {
     title,

@@ -19,10 +19,10 @@ export function GET(request: Request) {
           product model concepts (lego dub)
         </h1>
         {imageSize === "MD" ? (
-          <div tw="flex flex-row h-3/4">
-            <div tw="flex flex-col justify-center h-full w-2/3 justify-end">
-              <h2 tw="text-5xl font-medium mx-4">{title}</h2>
-              <p tw="text-5xl font-normal text-neutral-800 text-pretty mx-4">
+          <div tw="flex flex-row h-3/4 w-full items-center">
+            <div tw="flex flex-col pl-6">
+              <h2 tw="text-5xl font-bold mx-4">{title}</h2>
+              <p tw="text-4xl font-normal text-neutral-800 text-pretty mx-4">
                 {description}
               </p>
             </div>
@@ -37,13 +37,12 @@ export function GET(request: Request) {
             <img
               style={{ objectFit: "contain" }}
               tw="absolute top-10 w-full h-1/3"
-              src="https://res.cloudinary.com/bjg-photo/image/upload/v1712864043/strategy_fnyiwc.png"
+              src={image}
             />
-            <div tw="flex flex-col justify-end h-2/3 w-full">
-              <h2 tw="text-5xl font-medium mx-4">Product-Market Fit</h2>
+            <div tw="flex flex-col justify-center h-2/3 w-full">
+              <h2 tw="text-5xl font-bold mx-4">{title}</h2>
               <p tw="text-4xl font-normal text-neutral-800 text-pretty mx-4">
-                The alignment between a product's value proposition and the
-                opportunities of its target market.
+                {description}
               </p>
             </div>
           </div>
