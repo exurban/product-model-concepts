@@ -20,17 +20,13 @@ export function GET(request: Request) {
         </h1>
         {imageSize === "MD" ? (
           <>
-            <div tw="flex flex-row w-full h-2/3 items-center justify-between bg-yellow-100">
+            <div tw="flex flex-row h-[360px] items-center justify-between bg-yellow-100">
               <div tw="flex flex-col w-1/2 h-full items-left justify-center text-pretty mx-6 bg-green-500">
                 <h3 tw="text-5xl font-bold">{title}</h3>
                 <p tw="text-4xl font-normal">{description}</p>
               </div>
               <div tw="flex w-1/3 h-full items-center mx-6 bg-yellow-500">
-                <img
-                  style={{ objectFit: "contain" }}
-                  tw="absolute right-0"
-                  src={image}
-                />
+                <img style={{ objectFit: "contain" }} tw="" src={image} />
               </div>
             </div>
             <div tw="flex rounded-md shadow justify-end pr-6 pb-6 bg-blue-500">
@@ -41,10 +37,10 @@ export function GET(request: Request) {
           </>
         ) : (
           <>
-            <div tw="flex flex-col items-center h-1/4">
+            <div tw="flex flex-col h-[200px] items-center justify-center">
               <img
                 style={{ objectFit: "contain" }}
-                tw="absolute w-4/5 py-2"
+                tw="h-[160px]"
                 src={image}
               />
             </div>
