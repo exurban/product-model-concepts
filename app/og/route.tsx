@@ -15,7 +15,7 @@ export function GET(request: Request) {
   return new ImageResponse(
     (
       <>
-        {imageSize === "MD" && (
+        {imageSize === "MD" ? (
           <div tw="flex flex-col w-full h-full bg-white justify-between">
             <h1 tw="flex flex-row h-20 text-4xl font-normal border-b-2 border-rose-500 tracking-tight items-center justify-center">
               product model concepts (lego dub)
@@ -31,6 +31,30 @@ export function GET(request: Request) {
             </div>
             <div tw="flex rounded-md shadow justify-end pr-6 pb-6">
               <a tw="flex items-center justify-center rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-medium text-white">
+                Read
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div tw="flex flex-col w-full h-full bg-white justify-between">
+            <p tw="flex flex-row text-4xl font-normal border-b-2 my-0 border-rose-500 tracking-tight items-center justify-center">
+              product model concepts (lego dub)
+            </p>
+            <div tw="flex flex-col h-[200px] items-center justify-center">
+              <img
+                style={{ objectFit: "contain" }}
+                tw="h-[160px]"
+                src={image}
+              />
+            </div>
+            <div tw="flex flex-col w-full px-10">
+              <h2 tw="text-5xl font-bold">{title}</h2>
+              <p tw="text-4xl font-normal text-neutral-800 text-pretty">
+                {description}
+              </p>
+            </div>
+            <div tw="flex rounded-md shadow self-end p-10">
+              <a tw="lex items-center justify-center rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-medium text-white">
                 Read
               </a>
             </div>
