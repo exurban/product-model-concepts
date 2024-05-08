@@ -10,13 +10,13 @@ import { baseUrl } from "./sitemap";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Product Model Concepts",
+    default: "Product Model Concepts (LEGO dub)",
     template: "%s | Product Model Concepts",
   },
   description:
     "How Product Model concepts fit and work together to build impactful products.",
   openGraph: {
-    title: "Product Model Concepts",
+    title: "Product Model Concepts (LEGO dub)",
     description:
       "How Product Model concepts fit and work together to build impactful products.",
     url: baseUrl,
