@@ -46,16 +46,16 @@ export function GET(request: Request) {
                 src={image}
               />
             </div>
-            <div tw="flex flex-col w-full p-10">
+            <div tw="flex flex-col w-full px-10">
               <h2 tw="text-5xl font-bold">{title}</h2>
               <p tw="text-4xl font-normal text-neutral-800 text-pretty">
                 {description}
               </p>
-              <div tw="flex rounded-md shadow self-end">
-                <a tw="flex items-center justify-center rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-medium text-white">
-                  Read
-                </a>
-              </div>
+            </div>
+            <div tw="flex rounded-md shadow self-end p-10">
+              <a tw="flex items-center justify-center rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-medium text-white">
+                Read
+              </a>
             </div>
           </>
         )}
