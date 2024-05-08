@@ -13,12 +13,14 @@ export function GET(request: Request) {
   return new ImageResponse(
     (
       <div tw="flex flex-row w-full h-full bg-white ">
-        <h1 tw="h-24 text-5xl border-b-2 border-rose-500 text-center my-auto">
+        <h1 tw="h-24 text-6xl border-b-2 border-rose-500 tracking-tight">
           product model concepts (lego dub)
         </h1>
         <div tw="flex flex-col items-start justify-center">
-          <h2 tw="text-4xl font-medium">{title}</h2>
-          <p tw="text-4xl font-normal text-neutral-800">{description}</p>
+          <h2 tw="text-5xl font-medium">{title}</h2>
+          <p tw="text-5xl font-normal text-neutral-800 text-pretty">
+            {description}
+          </p>
         </div>
       </div>
     ),
