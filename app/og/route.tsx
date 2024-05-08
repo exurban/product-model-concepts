@@ -20,32 +20,44 @@ export function GET(request: Request) {
         </h1>
         {imageSize === "MD" ? (
           <div tw="flex flex-row h-3/4 w-full items-center">
-            <div tw="flex flex-col pl-6">
-              <h2 tw="text-5xl font-bold mx-4">{title}</h2>
-              <p tw="text-4xl font-normal text-neutral-800 text-pretty mx-4">
+            <div tw="flex flex-col pl-6 px-10 max-w-2/3">
+              <h2 tw="text-5xl font-bold">{title}</h2>
+              <p tw="text-4xl font-normal text-neutral-800 text-pretty">
                 {description}
               </p>
+              <div tw="flex rounded-md shadow self-end">
+                <a tw="flex items-center justify-center rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-medium text-white">
+                  Read
+                </a>
+              </div>
             </div>
             <img
               style={{ objectFit: "contain" }}
-              tw="absolute right-0 w-1/3 h-full"
+              tw="absolute right-0 w-1/3 h-full pr-10"
               src={image}
             />
           </div>
         ) : (
-          <div tw="flex flex-col h-3/4 justify-end">
-            <img
-              style={{ objectFit: "contain" }}
-              tw="absolute top-10 w-full h-1/3"
-              src={image}
-            />
-            <div tw="flex flex-col justify-center h-2/3 w-full">
-              <h2 tw="text-5xl font-bold mx-4">{title}</h2>
-              <p tw="text-4xl font-normal text-neutral-800 text-pretty mx-4">
+          <>
+            <div tw="flex flex-col items-center h-1/4">
+              <img
+                style={{ objectFit: "contain" }}
+                tw="absolute w-4/5 py-2"
+                src={image}
+              />
+            </div>
+            <div tw="flex flex-col w-full p-10">
+              <h2 tw="text-5xl font-bold">{title}</h2>
+              <p tw="text-4xl font-normal text-neutral-800 text-pretty">
                 {description}
               </p>
+              <div tw="flex rounded-md shadow self-end">
+                <a tw="flex items-center justify-center rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-medium text-white">
+                  Read
+                </a>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     ),
