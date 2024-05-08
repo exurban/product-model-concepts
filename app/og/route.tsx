@@ -12,15 +12,22 @@ export function GET(request: Request) {
 
   return new ImageResponse(
     (
-      <div tw="flex flex-row w-full h-full bg-white ">
-        <h1 tw="h-24 text-6xl border-b-2 border-rose-500 tracking-tight">
+      <div tw="flex flex-col w-full h-full bg-white">
+        <h1 tw="flex flex-row h-20 text-4xl font-normal border-b-2 border-rose-500 tracking-tight items-center justify-center">
           product model concepts (lego dub)
         </h1>
-        <div tw="flex flex-col items-start justify-center">
-          <h2 tw="text-5xl font-medium">{title}</h2>
-          <p tw="text-5xl font-normal text-neutral-800 text-pretty">
-            {description}
-          </p>
+        <div tw="flex flex-row h-3/4">
+          <div tw="flex flex-col justify-center h-full w-2/3 justify-end">
+            <h2 tw="text-5xl font-medium mx-4">{title}</h2>
+            <p tw="text-5xl font-normal text-neutral-800 text-pretty mx-4">
+              {description}
+            </p>
+          </div>
+          <img
+            style={{ objectFit: "contain" }}
+            tw="absolute right-0 w-1/3 h-full"
+            src={image}
+          />
         </div>
       </div>
     ),
