@@ -66,6 +66,17 @@ function ColoredCallout({ children, ...props }) {
   );
 }
 
+function WhimsicalEmbed(props) {
+  return (
+    <iframe
+      src={`https://whimsical.com/embed/${props.id}`}
+      width="100%"
+      height="500px"
+      style={{ border: "none" }}
+    />
+  );
+}
+
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
@@ -122,6 +133,7 @@ let components = {
   Table,
   Cite,
   ColoredCallout,
+  WhimsicalEmbed,
 };
 
 export function CustomMDX(props) {
